@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
-import xgboost as xg
+from joblib import dump, load
+
+#from sklearn import datasets
+#import xgboost as xg
+
 
 st.write("""
 # Demo Insurance Regression Prediction App
@@ -41,8 +45,7 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-model = xg.XGBRegressor()
-model.load_model("../models/xg_model.pkl")
+model = load('../models/rf_model.joblib') 
 
 prediction = model.predict(df)
 
