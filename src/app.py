@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from joblib import dump, load
+from sklearn.ensemble import RandomForestRegressor
 
 #from sklearn import datasets
 #import xgboost as xg
