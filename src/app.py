@@ -45,7 +45,7 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-model = load('../models/rf_model.joblib') 
+model = load('../models/rf_model.pkl') 
 
 prediction = model.predict(df)
 
