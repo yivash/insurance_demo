@@ -57,7 +57,6 @@ else:
     src_dir = cwd
 
 model_path = os.path.join(src_dir, "rf_model.pkl")
-st.write(model_path)
 
 model = load(model_path)
 
