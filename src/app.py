@@ -48,9 +48,9 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-model_file = os.path.join(os.getcwd(), 'rf_model.pkl')
+model_path = os.path.abspath("rf_model.pkl")
 
-model = load(model_file)
+model = load(model_path)
 
 prediction = model.predict(df)
 
