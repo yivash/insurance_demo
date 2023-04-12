@@ -62,7 +62,7 @@ st.write(src_dir)
 files = os.listdir(src_dir)
 st.write(files)
 
-model_path = os.path.abspath("rf_model.pkl")
+model_path = os.path.join(src_dir, "rf_model.pkl")
 st.write(model_path)
 
 model = load(model_path)
