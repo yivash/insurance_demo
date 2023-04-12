@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 from joblib import dump, load
 from sklearn.ensemble import RandomForestRegressor
+import os
+
 
 #from sklearn import datasets
 #import xgboost as xg
@@ -46,7 +48,9 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-model = load('rf_model.pkl') 
+model_file = os.path.join(os.getcwd(), 'rf_model.pkl')
+
+model = load(model_file)
 
 prediction = model.predict(df)
 
