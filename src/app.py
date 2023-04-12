@@ -56,12 +56,6 @@ if not cwd.endswith("src"):
 else:
     src_dir = cwd
 
-st.write(src_dir)
-
-# List all files in the directory
-files = os.listdir(src_dir)
-st.write(files)
-
 model_path = os.path.join(src_dir, "rf_model.pkl")
 st.write(model_path)
 
