@@ -49,6 +49,12 @@ st.subheader('User Input parameters')
 st.write(df)
 
 st.write(os.getcwd())
+# Get the current working directory
+cwd = os.getcwd()
+
+# List all files in the directory
+files = os.listdir(cwd)
+st.write(files)
 
 model_path = os.path.abspath("rf_model.pkl")
 
