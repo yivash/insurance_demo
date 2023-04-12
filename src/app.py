@@ -48,6 +48,8 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
+st.write(os.getcwd())
+
 model_path = os.path.abspath("rf_model.pkl")
 
 model = load(model_path)
