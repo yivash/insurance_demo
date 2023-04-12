@@ -58,6 +58,7 @@ files = os.listdir(cwd)
 st.write(files)
 
 model_path = os.path.abspath("rf_model.pkl")
+st.write(model_path)
 
 model = load(model_path)
 
